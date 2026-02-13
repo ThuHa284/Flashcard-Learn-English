@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Thống kê & Lịch sử</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="sidebar-container" class="sidebar"></div>
+
+    <div class="main-content">
+      <h1 class="page-title">Lịch sử học tập 📊</h1>
+
+      <div
+        class="grid-container"
+        style="grid-template-columns: 1fr; max-width: 800px"
+      >
+        <div id="history-list">
+          <!-- JS render history cards -->
+        </div>
+      </div>
+
+      <div
+        id="empty-history"
+        style="text-align: center; color: #999; display: none; margin-top: 50px"
+      >
+        <p style="font-size: 1.2rem">Bạn chưa làm bài kiểm tra nào cả.</p>
+        <button
+          class="btn"
+          style="margin-top: 15px"
+          onclick="location.href = 'quiz.html'"
+        >
+          Làm bài ngay 🚀
+        </button>
+      </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/statistics.js"></script>
+  </body>
+</html>

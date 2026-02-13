@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Kiểm Tra</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="sidebar-container" class="sidebar"></div>
+
+    <div class="main-content">
+      <h1 class="page-title">Kiểm tra kiến thức 🎯</h1>
+
+      <!-- Setup -->
+      <div
+        id="quiz-setup"
+        class="card"
+        style="max-width: 500px; margin: 0 auto"
+      >
+        <h3>Chọn chủ đề kiểm tra</h3>
+        <select id="quiz-topic-select" style="margin: 20px 0"></select>
+        <button class="btn" onclick="startQuiz()">Bắt đầu ngay</button>
+      </div>
+
+      <!-- Playing -->
+      <div
+        id="quiz-play"
+        class="card"
+        style="max-width: 600px; margin: 0 auto; display: none"
+      >
+        <p
+          id="q-progress"
+          style="text-align: right; color: #888; margin-bottom: 10px"
+        >
+          1/10
+        </p>
+        <img
+          id="q-img"
+          src=""
+          style="
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+          "
+        />
+        <h2
+          id="q-question"
+          style="color: var(--primary-dark); margin-bottom: 20px"
+        >
+          Câu hỏi?
+        </h2>
+
+        <div
+          id="q-options"
+          style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px"
+        >
+          <!-- JS insert options -->
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div
+        id="quiz-result"
+        class="card"
+        style="
+          max-width: 500px;
+          margin: 0 auto;
+          display: none;
+          text-align: center;
+        "
+      >
+        <h1 style="font-size: 4rem; margin-bottom: 10px">🎉</h1>
+        <h2>Hoàn thành!</h2>
+        <p>Điểm số của bạn:</p>
+        <h1
+          id="final-score"
+          style="color: var(--primary); font-size: 3rem; margin: 20px 0"
+        >
+          8/10
+        </h1>
+        <button class="btn" onclick="location.reload()">Làm lại</button>
+      </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/quiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chi tiết Chủ đề</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="sidebar-container" class="sidebar"></div>
+
+    <div class="main-content">
+      <!-- Header thông tin chủ đề -->
+      <div id="topic-header" class="topic-header">
+        <!-- JS render info -->
+      </div>
+
+      <h2 style="margin-bottom: 20px; color: var(--text-main)">
+        Danh sách từ vựng 📝
+      </h2>
+
+      <div id="word-list" class="grid-container">
+        <!-- JS render words -->
+      </div>
+
+      <!-- MODAL SỬA TỪ -->
+      <div id="edit-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal" onclick="closeEditModal()">&times;</span>
+          <h2>✏️ Chỉnh sửa từ vựng</h2>
+          <div class="form-group" style="margin-top: 20px">
+            <label>Tiếng Anh:</label>
+            <input type="text" id="edit-en" />
+          </div>
+          <div class="form-group">
+            <label>Tiếng Việt:</label>
+            <input type="text" id="edit-vn" />
+          </div>
+          <div class="form-group">
+            <label>Đổi Ảnh (Nếu cần):</label>
+            <input type="file" id="edit-img" accept="image/*" />
+          </div>
+          <input type="hidden" id="edit-id" />
+          <!-- Lưu ID từ đang sửa -->
+          <button class="btn" onclick="saveEditWord()" style="width: 100%">
+            Lưu thay đổi
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/topic-detail.js"></script>
+  </body>
+</html>

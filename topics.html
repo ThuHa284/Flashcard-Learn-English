@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý Chủ đề</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="sidebar-container" class="sidebar"></div>
+
+    <div class="main-content">
+      <h1 class="page-title">Danh sách Chủ đề 📚</h1>
+
+      <!-- Form thêm chủ đề nhanh -->
+      <div class="card" style="margin-bottom: 30px; text-align: left">
+        <h3>Thêm chủ đề mới</h3>
+        <div
+          style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px"
+        >
+          <input
+            type="text"
+            id="topic-name"
+            placeholder="Tên chủ đề (VD: Travel)"
+          />
+          <input type="text" id="topic-desc" placeholder="Mô tả ngắn" />
+          <button class="btn" onclick="addTopic()">Thêm ngay</button>
+        </div>
+      </div>
+
+      <div id="topics-list" class="grid-container">
+        <!-- JS render -->
+      </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/topics.js"></script>
+  </body>
+</html>

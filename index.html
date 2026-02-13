@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinky English - Trang chủ</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="sidebar-container" class="sidebar"></div>
+    <!-- Sidebar tự động load -->
+
+    <div class="main-content">
+      <h1 class="page-title">Xin chào, Cùng học nào! ✨</h1>
+
+      <div class="grid-container">
+        <div class="card" onclick="location.href = 'topics.html'">
+          <h3>Tổng chủ đề</h3>
+          <p id="total-topics" style="font-size: 3rem; color: var(--primary)">
+            0
+          </p>
+          <p>chủ đề đang có</p>
+        </div>
+        <div class="card" onclick="location.href = 'study.html'">
+          <h3>Tổng từ vựng</h3>
+          <p id="total-words" style="font-size: 3rem; color: var(--primary)">
+            0
+          </p>
+          <p>từ để học</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

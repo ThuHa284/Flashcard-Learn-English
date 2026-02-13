@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thêm từ vựng</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="sidebar-container" class="sidebar"></div>
+
+    <div class="main-content">
+      <h1 class="page-title">Thêm từ mới ✍️</h1>
+
+      <div style="display: flex; gap: 30px; flex-wrap: wrap">
+        <!-- Cột Form -->
+        <div class="card" style="flex: 1; min-width: 300px; text-align: left">
+          <div class="form-group">
+            <label>Chọn chủ đề:</label>
+            <select id="select-topic"></select>
+          </div>
+          <div class="form-group">
+            <label>Từ Tiếng Anh:</label>
+            <input type="text" id="inp-en" placeholder="VD: Flower" />
+          </div>
+          <div class="form-group">
+            <label>Nghĩa Tiếng Việt:</label>
+            <input type="text" id="inp-vn" placeholder="VD: Bông hoa" />
+          </div>
+          <div class="form-group">
+            <label>Hình minh họa:</label>
+            <input type="file" id="inp-img" accept="image/*" />
+          </div>
+          <button class="btn" onclick="saveWord()">Lưu Flashcard</button>
+        </div>
+
+        <!-- Cột Preview -->
+        <div
+          style="
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          "
+        >
+          <h3>Xem trước thẻ</h3>
+          <div
+            class="flashcard-scene"
+            style="height: 300px; width: 250px; margin-top: 20px"
+          >
+            <div class="flashcard-inner" id="preview-card">
+              <div class="flashcard-face">
+                <img
+                  src=""
+                  id="prev-img"
+                  class="flashcard-img"
+                  style="display: none"
+                />
+                <h2 id="prev-en">English</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/add-word.js"></script>
+  </body>
+</html>
